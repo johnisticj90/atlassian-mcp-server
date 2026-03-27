@@ -431,9 +431,9 @@ https://yoursite.atlassian.net/browse/PROJ-123
 
 2. Ask user for values: "This project requires a 'Priority' field. What priority should I use? (e.g., High, Medium, Low)"
 
-3. Include in `additional_fields` when creating:
+3. Include in `fields` when creating:
    ```
-   additional_fields={
+   fields={
      "priority": {"name": "High"}
    }
    ```
