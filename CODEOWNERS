@@ -1,5 +1,6 @@
 # Global code owners for the Atlassian MCP Server repository
 # These users will be automatically requested for review on all pull requests
 # Note: forked for personal learning - removed upstream owners, using my own handle
+# Last updated: experimenting with Jira/Confluence MCP tooling
 
 * @me
