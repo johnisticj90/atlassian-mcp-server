@@ -76,7 +76,8 @@ export class AtlassianClient {
     };
   }
 
-  async searchJiraIssues(jql: string, maxResults = 50): Promise<JiraIssue[]> {
+  // bumped default from 50 to 100 since I usually want more results
+  async searchJiraIssues(jql: string, maxResults = 100): Promise<JiraIssue[]> {
     const data = await this.request<any>(`/rest/api/3/search?jql=${encodeURIComponent(jql)}&maxResults=${maxResults}`);
     return data.issues.map((issue: any) => ({
       id: issue.id,
@@ -101,24 +102,4 @@ export class AtlassianClient {
       body: data.body?.storage?.value,
       version: data.version.number,
       created: data.history?.createdDate,
-      updated: data.version.when,
-      url: `${this.config.baseUrl}/wiki${data._links.webui}`,
-    };
-  }
-
-  async searchConfluencePages(query: string, spaceKey?: string): Promise<ConfluencePage[]> {
-    const cql = spaceKey
-      ? `text ~ "${query}" AND space.key = "${spaceKey}"`
-      : `text ~ "${query}"`;
-    const data = await this.request<any>(`/wiki/rest/api/content/search?cql=${encodeURIComponent(cql)}&expand=version,space`);
-    return data.results.map((page: any) => ({
-      id: page.id,
-      title: page.title,
-      spaceKey: page.space?.key,
-      version: page.version?.number,
-      created: page.history?.createdDate,
-      updated: page.version?.when,
-      url: `${this.config.baseUrl}/wiki${page._links?.webui}`,
-    }));
-  }
-}
+      updated: data.ver
