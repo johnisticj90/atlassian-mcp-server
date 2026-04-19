@@ -1,4 +1,5 @@
 # Global code owners for the Atlassian MCP Server repository
 # These users will be automatically requested for review on all pull requests
+# Note: forked for personal learning - removed upstream owners, using my own handle
 
-* @pnguyen-atlassian @SreeNerella @iosamaatlassian @lsosa1 @dvenkatesh07 @blakewang-atlassian @jvarghese2 @ekahinga @jatinkrmalik
+* @me
