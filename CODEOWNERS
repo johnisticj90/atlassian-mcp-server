@@ -2,5 +2,6 @@
 # These users will be automatically requested for review on all pull requests
 # Note: forked for personal learning - removed upstream owners, using my own handle
 # Last updated: experimenting with Jira/Confluence MCP tooling
+# TODO: revisit this once I start making more substantial changes
 
 * @me
