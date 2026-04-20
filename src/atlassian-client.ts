@@ -77,7 +77,8 @@ export class AtlassianClient {
   }
 
   // bumped default from 50 to 100 since I usually want more results
-  async searchJiraIssues(jql: string, maxResults = 100): Promise<JiraIssue[]> {
+  // bumped again to 250 - 100 still wasn't enough for our big projects
+  async searchJiraIssues(jql: string, maxResults = 250): Promise<JiraIssue[]> {
     const data = await this.request<any>(`/rest/api/3/search?jql=${encodeURIComponent(jql)}&maxResults=${maxResults}`);
     return data.issues.map((issue: any) => ({
       id: issue.id,
@@ -100,6 +101,4 @@ export class AtlassianClient {
       title: data.title,
       spaceKey: data.space.key,
       body: data.body?.storage?.value,
-      version: data.version.number,
-      created: data.history?.createdDate,
-      updated: data.ver
+      version: data.version.num
