@@ -21,6 +21,8 @@ This Code of Conduct applies both within project spaces and in public spaces whe
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting a project maintainer. Complaints will result in a response and be reviewed and investigated in a way that is deemed necessary and appropriate to the circumstances. Maintainers are obligated to maintain confidentiality with regard to the reporter of an incident.
 
+> **Note (personal fork):** This is a personal fork used for learning and experimentation. I'm not actively maintaining a community here, but I'm keeping this Code of Conduct in place as a baseline standard I hold myself to and would expect from any collaborators.
+
 This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.3.0, available at [http://contributor-covenant.org/version/1/3/0/][version]
 
 [homepage]: http://contributor-covenant.org
