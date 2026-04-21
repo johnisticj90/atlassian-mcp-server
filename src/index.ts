@@ -35,6 +35,8 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     return result;
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
+    // Log errors to stderr so they show up in my local debugging output
+    console.error(`[tool error] ${name}:`, message);
     return {
       content: [
         {
